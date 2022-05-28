@@ -17,8 +17,8 @@
             var p=document.getElementById("p").value
             var q=document.getElementById("q").value
             var an=[document.getElementById("a0").value]
-            p=p.replace(/([^\+\-\*\/\(\)\^])n/gi,"$1*n").replace(/([^\+\-\*\/\(\)\^])(?=\()/g,"$1*").replace(/\)([^\+\-\*\/\(\)\^])/g,"*\)$1").replace(/\)\(/g,"\)*\(")
-            q=q.replace(/([^\+\-\*\/\(\)\^])n/gi,"$1*n").replace(/([^\+\-\*\/\(\)\^])(?=\()/g,"$1*").replace(/\)([^\+\-\*\/\(\)\^])/g,"*\)$1").replace(/\)\(/g,"\)*\(")
+            p=p.replace(/([^\+\-\*\/\(\)\^])n/gi,"$1*n").replace(/([^\+\-\*\/\(\)\^])(?=\()/g,"$1*").replace(/\)([^\+\-\*\/\(\)\^])/g,"\)*$1").replace(/\)\(/g,"\)*\(")
+            q=q.replace(/([^\+\-\*\/\(\)\^])n/gi,"$1*n").replace(/([^\+\-\*\/\(\)\^])(?=\()/g,"$1*").replace(/\)([^\+\-\*\/\(\)\^])/g,"\)*$1").replace(/\)\(/g,"\)*\(")
             p=p.replace(/＋/g,"+").replace(/ー/g,"-").replace(/＊/g,"*").replace(/＾/g,"^").replace(/[Ａ-Ｚａ-ｚ０-９]/g, function(s) {return String.fromCharCode(s.charCodeAt(0) - 0xFEE0)})
             q=q.replace(/＋/g,"+").replace(/ー/g,"-").replace(/＊/g,"*").replace(/＾/g,"^").replace(/[Ａ-Ｚａ-ｚ０-９]/g, function(s) {return String.fromCharCode(s.charCodeAt(0) - 0xFEE0)})
             p=p.replace("＋","+").replace("ー","-").replace("＊","*")
